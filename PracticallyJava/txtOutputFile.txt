@@ -1,0 +1,3 @@
+Welcome to Java File handling
+We can write text to files and databases
+We can read text from files and databases
