@@ -10,13 +10,18 @@ import org.springframework.context.ApplicationContext;
 
 import java.text.NumberFormat;
 
-import static org.junit.jupiter.api.Assertions.assertSame;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class DemoApplicationTests {
     @Autowired
     private ApplicationContext context;
+
+    @Test
+    void autowiringWorked() {
+        assertNotNull(context);
+        System.out.println(context.getClass().getClass());
+    }
 
     @Test
     void contextLoads() {
