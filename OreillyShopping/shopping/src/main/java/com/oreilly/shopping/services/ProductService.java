@@ -27,16 +27,21 @@ public class ProductService {
         }
         return productRepository.findAll();
     }
-
+    @Transactional(readOnly = true)
     public List<Product> findAllProducts() {
         return productRepository.findAll();
     }
 
+    @Transactional(readOnly = true)
     public Optional<Product> findProductById(int id) {
         return productRepository.findById(id);
     }
 
     public Product saveProduct(Product product) {
         return productRepository.save(product);
+    }
+
+    public void deleteProduct(int id) {
+        productRepository.deleteById(id);
     }
 }
