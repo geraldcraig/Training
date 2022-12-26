@@ -1,7 +1,5 @@
 package com.frankmoley.lil.sbet.landon.roomwebapp.models;
 
-import com.frankmoley.lil.sbet.landon.roomwebapp.service.Position;
-
 public class StaffMember {
 
     private String employeeId;

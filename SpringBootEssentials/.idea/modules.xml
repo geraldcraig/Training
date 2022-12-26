@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SpringBootEssentials.iml" filepath="$PROJECT_DIR$/SpringBootEssentials.iml" />
       <module fileurl="file://$PROJECT_DIR$/booting-web/booting-web.iml" filepath="$PROJECT_DIR$/booting-web/booting-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fizz-buzz/fizz-buzz.iml" filepath="$PROJECT_DIR$/fizz-buzz/fizz-buzz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/room-clr/room-clr.iml" filepath="$PROJECT_DIR$/room-clr/room-clr.iml" />
       <module fileurl="file://$PROJECT_DIR$/room-web-app/room-web-app.iml" filepath="$PROJECT_DIR$/room-web-app/room-web-app.iml" />
     </modules>
   </component>

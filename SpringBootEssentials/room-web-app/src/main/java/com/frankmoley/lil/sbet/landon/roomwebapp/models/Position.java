@@ -1,4 +1,4 @@
-package com.frankmoley.lil.sbet.landon.roomwebapp.service;
+package com.frankmoley.lil.sbet.landon.roomwebapp.models;
 
 public enum Position {
     HOUSEKEEPING, FRONT_DESK, SECURITY, CONCIERGE;
