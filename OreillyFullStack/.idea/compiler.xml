@@ -11,6 +11,7 @@
         <module name="CarDataBaseMySQL" />
         <module name="CarDataBaseWebService" />
         <module name="CarDataBaseMySQLMany" />
+        <module name="CarDataBaseSecurity" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +20,7 @@
       <module name="cardatabaseh21" target="11" />
       <module name="CarDataBaseMySQL" target="11" />
       <module name="CarDataBaseMySQLMany" target="11" />
+      <module name="CarDataBaseSecurity" target="11" />
       <module name="CarDataBaseWebService" target="11" />
     </bytecodeTargetLevel>
   </component>
@@ -28,6 +30,7 @@
       <module name="CarDataBaseH2" options="-parameters" />
       <module name="CarDataBaseMySQL" options="-parameters" />
       <module name="CarDataBaseMySQLMany" options="-parameters" />
+      <module name="CarDataBaseSecurity" options="-parameters" />
       <module name="CarDataBaseWebService" options="-parameters" />
       <module name="cardatabaseh21" options="-parameters" />
     </option>

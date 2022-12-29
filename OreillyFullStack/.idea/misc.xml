@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/CarDataBaseMySQLMany/pom.xml" />
         <option value="$PROJECT_DIR$/CarDataBaseH2/pom.xml" />
         <option value="$PROJECT_DIR$/CarDataBaseWebService/pom.xml" />
+        <option value="$PROJECT_DIR$/CarDataBaseSecurity/pom.xml" />
       </list>
     </option>
   </component>

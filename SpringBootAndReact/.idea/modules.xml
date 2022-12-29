@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SpringBootAndReact.iml" filepath="$PROJECT_DIR$/SpringBootAndReact.iml" />
       <module fileurl="file://$PROJECT_DIR$/cardatabase/cardatabase.iml" filepath="$PROJECT_DIR$/cardatabase/cardatabase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cardatabase/demo.iml" filepath="$PROJECT_DIR$/cardatabase/demo.iml" />
     </modules>
   </component>
 </project>

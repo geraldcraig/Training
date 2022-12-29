@@ -1,5 +1,4 @@
-package com.packt.cardatabase.domain;
-
+package com.packt.cardatabasesecurity.domain;
 
 import javax.persistence.*;
 
@@ -8,19 +7,45 @@ public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private String brand, model, color, registerNumber;
-    private int carYear, price;
+    private String brand;
+    private String model;
+    private String color;
+    private String registerNumber;
+    private int carYear;
+    private int price;
+
 
     public Car() {
     }
 
-    public Car(String brand, String model, String color, String registerNumber, int carYear, int price) {
+    public Car(String brand, String model, String color, String registerNumber, int carYear, int price, Owner owner) {
         this.brand = brand;
         this.model = model;
         this.color = color;
         this.registerNumber = registerNumber;
         this.carYear = carYear;
         this.price = price;
+        this.owner = owner;
+    }
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "owner")
+    private Owner owner;
+
+    public Owner getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Owner owner) {
+        this.owner = owner;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getBrand() {
@@ -70,5 +95,6 @@ public class Car {
     public void setPrice(int price) {
         this.price = price;
     }
-
 }
+
+
