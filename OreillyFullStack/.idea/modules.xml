@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CarDataBase/CarDataBase.iml" filepath="$PROJECT_DIR$/CarDataBase/CarDataBase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CarDataBaseH2/CarDataBaseH2.iml" filepath="$PROJECT_DIR$/CarDataBaseH2/CarDataBaseH2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CarDataBaseMySQL/CarDataBaseMySQL.iml" filepath="$PROJECT_DIR$/CarDataBaseMySQL/CarDataBaseMySQL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CarDataBaseMySQLMany/CarDataBaseMySQLMany.iml" filepath="$PROJECT_DIR$/CarDataBaseMySQLMany/CarDataBaseMySQLMany.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CarDataBaseWebService/CarDataBaseWebService.iml" filepath="$PROJECT_DIR$/CarDataBaseWebService/CarDataBaseWebService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OreillyFullStack.iml" filepath="$PROJECT_DIR$/OreillyFullStack.iml" />
+    </modules>
+  </component>
+</project>

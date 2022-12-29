@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="CarDataBaseH2" />
+        <module name="CarDataBase" />
+        <module name="CarDataBaseMySQL" />
+        <module name="CarDataBaseWebService" />
+        <module name="CarDataBaseMySQLMany" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="CarDataBase" target="11" />
+      <module name="CarDataBaseH2" target="11" />
+      <module name="cardatabaseh21" target="11" />
+      <module name="CarDataBaseMySQL" target="11" />
+      <module name="CarDataBaseMySQLMany" target="11" />
+      <module name="CarDataBaseWebService" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="CarDataBase" options="-parameters" />
+      <module name="CarDataBaseH2" options="-parameters" />
+      <module name="CarDataBaseMySQL" options="-parameters" />
+      <module name="CarDataBaseMySQLMany" options="-parameters" />
+      <module name="CarDataBaseWebService" options="-parameters" />
+      <module name="cardatabaseh21" options="-parameters" />
+    </option>
+  </component>
+</project>

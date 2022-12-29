@@ -6,10 +6,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="booting-web" />
-        <module name="room-web-app" />
-        <module name="fizz-buzz" />
-        <module name="room-clr" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

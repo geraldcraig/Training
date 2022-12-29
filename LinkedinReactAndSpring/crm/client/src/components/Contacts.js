@@ -11,7 +11,7 @@ export default class Contacts extends Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:8080/api/contacts")
+        fetch("http://localhost:8000/api/contacts")
             .then(response => response.json())
             .then(data => this.setState({contacts: data}))
     }
