@@ -1,5 +1,6 @@
 package com.packt.cardatabasewebservicefrontend.domain;
 
+
 import javax.persistence.*;
 
 @Entity

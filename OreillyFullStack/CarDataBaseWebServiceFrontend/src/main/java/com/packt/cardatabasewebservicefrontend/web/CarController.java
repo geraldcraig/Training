@@ -1,8 +1,8 @@
-package com.packt.cardatabasesecurity.web;
+package com.packt.cardatabasewebservicefrontend.web;
 
 
-import com.packt.cardatabasesecurity.domain.Car;
-import com.packt.cardatabasesecurity.domain.CarRepository;
+import com.packt.cardatabasewebservicefrontend.domain.Car;
+import com.packt.cardatabasewebservicefrontend.domain.CarRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

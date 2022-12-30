@@ -1,7 +1,5 @@
 package com.packt.cardatabasesecurity;
 
-import java.util.Arrays;
-
 import com.packt.cardatabasesecurity.service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -19,13 +17,14 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
+import java.util.Arrays;
 
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
-    private UserDetailsServiceImpl userDetailsServiceImpl;
+    private UserDetailsServiceImpl userDetailsService;
 
     @Autowired
     private AuthenticationFilter authenticationFilter;
@@ -35,16 +34,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable().cors().and()
-                .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-                .authorizeRequests()
-                .antMatchers(HttpMethod.POST, "/login").permitAll()
-                .anyRequest().authenticated().and()
-                .exceptionHandling()
-                .authenticationEntryPoint(exceptionHandler).and()
-                .addFilterBefore(authenticationFilter,
-                        UsernamePasswordAuthenticationFilter.class);
+        http.csrf().disable().cors().and().authorizeRequests().anyRequest().permitAll();
+
+//        http.csrf().disable().cors().and()
+//                .sessionManagement()
+//                .sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
+//                .authorizeRequests()
+//                .antMatchers(HttpMethod.POST, "/login").permitAll()
+//                .anyRequest().authenticated().and()
+//                .exceptionHandling()
+//                .authenticationEntryPoint(exceptionHandler).and()
+//                .addFilterBefore(authenticationFilter,
+//                        UsernamePasswordAuthenticationFilter.class);
     }
 
     @Bean
@@ -64,7 +65,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth)
             throws Exception  {
-        auth.userDetailsService(userDetailsServiceImpl)
+        auth.userDetailsService(userDetailsService)
                 .passwordEncoder(new BCryptPasswordEncoder());
     }
 

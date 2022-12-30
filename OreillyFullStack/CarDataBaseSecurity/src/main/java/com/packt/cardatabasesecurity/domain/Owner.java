@@ -1,61 +1,66 @@
 package com.packt.cardatabasesecurity.domain;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Owner {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long ownerId;
-    private String firstName;
-    private String lastName;
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private long ownerid;
+    private String firstname, lastname;
 
-    public Owner() {
-    }
+    public Owner() {}
 
-    public Owner(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public Owner(String firstname, String lastname) {
+        super();
+        this.firstname = firstname;
+        this.lastname = lastname;
     }
 
     @JsonIgnore
-    @OneToMany(cascade=CascadeType.ALL, mappedBy = "owner")
+    @OneToMany(cascade=CascadeType.ALL, mappedBy="owner")
     private List<Car> cars;
 
-    public List<Car> getCars() {
+    public List<Car> getCars()  {
         return cars;
     }
 
-    public void setCars(List<Car> cars) {
+    public void setCars(List<Car> cars)  {
         this.cars = cars;
     }
 
-    public long getOwnerId() {
-        return ownerId;
+    public long getOwnerid() {
+        return ownerid;
     }
 
-    public void setOwnerId(long ownerId) {
-        this.ownerId = ownerId;
+    public void setOwnerid(long ownerid) {
+        this.ownerid = ownerid;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 }

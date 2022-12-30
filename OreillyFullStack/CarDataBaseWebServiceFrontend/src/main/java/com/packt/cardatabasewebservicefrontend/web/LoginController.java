@@ -1,10 +1,10 @@
-package com.packt.cardatabasesecurity.web;
+package com.packt.cardatabasewebservicefrontend.web;
 
-import com.packt.cardatabasesecurity.domain.AccountCredentials;
-import com.packt.cardatabasesecurity.service.JwtService;
+
+import com.packt.cardatabasewebservicefrontend.domain.AccountCredentials;
+import com.packt.cardatabasewebservicefrontend.service.JwtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
