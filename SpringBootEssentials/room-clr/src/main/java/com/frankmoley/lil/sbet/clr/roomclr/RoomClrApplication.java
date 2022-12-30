@@ -1,6 +1,5 @@
 package com.frankmoley.lil.sbet.clr.roomclr;
 
-import com.frankmoley.lil.sbet.landon.roomwebapp.models.Room;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;

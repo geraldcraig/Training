@@ -1,4 +1,4 @@
-package com.frankmoley.lil.sbet.landon.roomwebapp.models;
+package com.frankmoley.lil.sbet.clr.roomclr;
 
 public class Room {
 

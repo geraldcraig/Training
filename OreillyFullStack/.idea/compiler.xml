@@ -6,12 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="CarDataBaseH2" />
         <module name="CarDataBase" />
-        <module name="CarDataBaseMySQL" />
         <module name="CarDataBaseWebService" />
-        <module name="CarDataBaseMySQLMany" />
+        <module name="CarDataBaseWebServiceFrontend" />
         <module name="CarDataBaseSecurity" />
+        <module name="CarDataBaseH2" />
+        <module name="CarDataBaseMySQL" />
+        <module name="demo" />
+        <module name="CarDataBaseMySQLMany" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +24,8 @@
       <module name="CarDataBaseMySQLMany" target="11" />
       <module name="CarDataBaseSecurity" target="11" />
       <module name="CarDataBaseWebService" target="11" />
+      <module name="CarDataBaseWebServiceFrontend" target="11" />
+      <module name="demo" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -32,7 +36,9 @@
       <module name="CarDataBaseMySQLMany" options="-parameters" />
       <module name="CarDataBaseSecurity" options="-parameters" />
       <module name="CarDataBaseWebService" options="-parameters" />
+      <module name="CarDataBaseWebServiceFrontend" options="-parameters" />
       <module name="cardatabaseh21" options="-parameters" />
+      <module name="demo" options="-parameters" />
     </option>
   </component>
 </project>
