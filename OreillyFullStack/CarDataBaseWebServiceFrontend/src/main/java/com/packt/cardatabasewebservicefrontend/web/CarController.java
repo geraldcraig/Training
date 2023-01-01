@@ -1,6 +1,5 @@
 package com.packt.cardatabasewebservicefrontend.web;
 
-
 import com.packt.cardatabasewebservicefrontend.domain.Car;
 import com.packt.cardatabasewebservicefrontend.domain.CarRepository;
 import org.springframework.beans.factory.annotation.Autowired;
