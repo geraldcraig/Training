@@ -3,13 +3,24 @@ const ffmpeg = require('fluent-ffmpeg');
 
 const { app, BrowserWindow, ipcMain } = electron;
 
+let mainWindow;
+
 app.on('ready', () => {
-    const mainWindow = new BrowserWindow({}); 
-    mainWindow.loadURL(`file://${__dirname}/index.html`);
+  mainWindow = new BrowserWindow({webPreferences: {
+    nodeIntegration: true,
+    contextIsolation: false,
+    enableRemoteModule: true,
+  }
+});
+  
+  mainWindow.loadURL(`file://${__dirname}/index.html`);
 });
 
 ipcMain.on('video:submit', (event, path) => {
-    ffmpeg.ffprobe(path, (err, metadata) => {
-        console.log('Video duration is: ', metadata.format.duration);
-    });
+  ffmpeg.ffprobe(path, (err, metadata) => {
+    mainWindow.webContents.send(
+      'video:metadata',
+      metadata.format.duration
+    );
+  });
 });
