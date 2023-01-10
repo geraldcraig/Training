@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
+    <meta charset="utf-8">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
@@ -12,7 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     <!-- Custom Styles  -->
 
-<title th:text></title>
+<title></title>
 </head>
 
 <body>
@@ -31,8 +32,8 @@
 </nav>
 <div class="jumbotron text-center">
 
-<h1>Tolkien Dwarfs</h1>
-<h2 th:text= "${numberOfDwarfs}"></h2>
+<h1>Home Page</h1>
+<h2></h2>
 <br />
 
 </div>
@@ -40,25 +41,7 @@
 
 <div class="container">
 
-<p>This site will contain information about Tolkien Dwarfs</p>
-
-<table class="table table-striped">
-   <thead>
-      <tr>
-           <th>Name</th>
-           <th>Picture</th>
-       </tr>
-   </thead>
-   <tbody>
-   
-   </tbody>
-           
-        <tr th:each="dwarf: ${dwarfs}">   
-           <td th:text="${dwarf.name}">Balin</td>
-           <td><img  src="../static/img/Balin.png" th:src="@{/img/} + ${dwarf.image}"></img></td>
-      </tr>
-  
-</table>
+<p>This site will contain information about children's movies�
 
 </div>
 
