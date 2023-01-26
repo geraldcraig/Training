@@ -1,57 +1,31 @@
 package com.allstate.javaplayground;
 
-public class Backpack {
+public class  Backpack {
 
-    String backpack;
+    String name;
     int volume;
     String color;
     int pocketNum;
+    int strapLengthL;
+    int strapLengthR;
     boolean lidOpen;
-    StrapLength strapLength;
 
-    public class Straplength {
-        int left;
-        int right;
-
-        public int getRight() {
-            return right;
-        }
-
-        public int getLeft() {
-            return left;
-        }
-
-        public void setLeft(int left) {
-            this.left = left;
-        }
-
-        public void setRight(int right) {
-            this.right = right;
-        }
-    }
-
-    private void strapLength(int left, int right) {
-
-    }
-
-    public Backpack() {
-    }
-
-    public Backpack(String backpack, int volume, String color, int pocketNum, boolean lidOpen, StrapLength strapLength) {
-        this.backpack = backpack;
+    public Backpack(String name, int volume, String color, int pocketNum, int strapLengthL, int strapLengthR, boolean lidOpen) {
+        this.name = name;
         this.volume = volume;
         this.color = color;
         this.pocketNum = pocketNum;
+        this.strapLengthL = strapLengthL;
+        this.strapLengthR = strapLengthR;
         this.lidOpen = lidOpen;
-        this.strapLength = strapLength;
     }
 
-    public String getBackpack() {
-        return backpack;
+    public String getName() {
+        return name;
     }
 
-    public void setBackpack(String backpack) {
-        this.backpack = backpack;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getVolume() {
@@ -78,6 +52,22 @@ public class Backpack {
         this.pocketNum = pocketNum;
     }
 
+    public int getStrapLengthL() {
+        return strapLengthL;
+    }
+
+    public void setStrapLengthL(int strapLengthL) {
+        this.strapLengthL = strapLengthL;
+    }
+
+    public int getStrapLengthR() {
+        return strapLengthR;
+    }
+
+    public void setStrapLengthR(int strapLengthR) {
+        this.strapLengthR = strapLengthR;
+    }
+
     public boolean isLidOpen() {
         return lidOpen;
     }
@@ -86,32 +76,38 @@ public class Backpack {
         this.lidOpen = lidOpen;
     }
 
-    public StrapLength getStrapLength() {
-        return strapLength;
-    }
-
-    public void setStrapLength(StrapLength strapLength) {
-        this.strapLength = strapLength;
-    }
-
     @Override
     public String toString() {
         return "Backpack{" +
-                "backpack='" + backpack + '\'' +
+                "name='" + name + '\'' +
                 ", volume=" + volume +
                 ", color='" + color + '\'' +
                 ", pocketNum=" + pocketNum +
+                ", strapLengthL=" + strapLengthL +
+                ", strapLengthR=" + strapLengthR +
                 ", lidOpen=" + lidOpen +
-                ", strapLength=" + strapLength +
                 '}';
+    }
+
+//    static void newStrapLength(int left, int right) {
+//        strapLengthL = left;
+//        strapLengthR = right;
+//    }
+
+    public void toggleLid(boolean lidStatus) {
+        lidOpen = lidStatus;
     }
 
     public static void main(String[] args) {
 
-        Backpack backpack1 = new Backpack();
-        backpack1.backpack = "Everkday Backpack";
-        backpack1.strapLength(26, 26);
+
+//        newStrapLength(26, 26);
+
+        Backpack backpack1 = new Backpack("everyday backpack", 15, "grey", 15, 26, 26, false);
+//        backpack1.backpack = "Everkday Backpack";
+//        backpack1.strapLength(26, 26);
 
         System.out.println(backpack1);
     }
+
 }
