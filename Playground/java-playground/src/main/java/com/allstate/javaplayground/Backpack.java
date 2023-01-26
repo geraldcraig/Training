@@ -89,10 +89,11 @@ public class  Backpack {
                 '}';
     }
 
-//    static void newStrapLength(int left, int right) {
+    static void newStrapLength(int left, int right) {
+        System.out.println(left);
 //        strapLengthL = left;
 //        strapLengthR = right;
-//    }
+    }
 
     public void toggleLid(boolean lidStatus) {
         lidOpen = lidStatus;
@@ -101,7 +102,7 @@ public class  Backpack {
     public static void main(String[] args) {
 
 
-//        newStrapLength(26, 26);
+        newStrapLength(26, 26);
 
         Backpack backpack1 = new Backpack("everyday backpack", 15, "grey", 15, 26, 26, false);
 //        backpack1.backpack = "Everkday Backpack";
