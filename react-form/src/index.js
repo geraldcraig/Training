@@ -19,7 +19,7 @@ function MyForm() {
         <form onSubmit={handleSubmit}>
             <fieldset>
                 <legend>Audio processing options</legend>
-                <select value={name} onChange={handleChange}>
+                <select value={inputs.car || ""} onChange={handleChange}>
                     <option value="Ford">Ford</option>
                     <option value="Volvo">Volvo</option>
                     <option value="Fiat">Fiat</option>
