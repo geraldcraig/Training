@@ -1,38 +1,74 @@
-.App {
+/* resets all elements to default settings on page load */
+body, header, nav, main, footer, h1, div, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* list hover setting */
+nav li a:hover {
+  color: #000;
+  background-color: #000;
+  transform: scale(1.1);
+}
+
+/* css to handle transitions, animation and effects */
+.zoom {
+  transition: .5s ease; /* speed and style of transition */
+}
+
+.zoom:hover {
+  transform: scale(1.1); /* size of zoom out */
+}
+
+.frame:hover {
+  opacity: 1;
+  box-shadow: 8px 8px 10px #000000;
+  transform: translate(10px);
+}
+
+.flip {
+  transition: 1.5s ease; /* speed and style of transition */
+}
+
+.flip:hover {
+  transform: scaleX(-1); /* Flipping on x-axis */
+}
+
+#panel, #flip {
+  padding: 5px;
   text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#panel {
+  padding: 50px;
+  display: none;
+}
+/* canvas setting */
+#myCanvas {
+  border: 1px solid #d3d3d3;
+  margin-left: 10em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
 }
 
-.App-link {
-  color: #61dafb;
+/* image setting */
+img {
+  max-width: 100%;
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- My Style Sheet -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>The Record Store</title>
+</head>
+
+<body>
+
+    <!-- Bootstrap Navigation bar -->
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="index.html">The Record Store</a>
+
+        <!-- Hamburger menu icon -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav m1-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Heritage Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="jumbotron jumbotron-fluid text-center mt-5">
+        <div class="container">
+            <h1 class="display-1">Products</h1>
+            <p class="lead">Welcome to The Record Store. We have a large collection of new and used CDs and Vinyl.</p>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <div class="container">
+        <div class="table-responsive">
+            <table class="table table-sm table-striped table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Artist</th>
+                        <th>Title</th>
+                        <th>Format</th>
+                        <th>Price</th>
+                        <th>Image</th>
+                        <th>Check Availability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Miles Davis</td>
+                        <td>Kind of Blue</td>
+                        <td>Vinyl</td>
+                        <td>£29.99</td>
+                        <td><img src="../images/blue.jpeg" style="width: 20%;"></td>
+                        <!-- JavaScript to handle screen events -->
+                        <td><div onmouseover="mOver2(this)" onmouseout="mOut(this)">Check Availability</div></td>
+                    </tr>
+                    <tr>
+                        <td>John Coltrane</td>
+                        <td>A love Supreme</td>
+                        <td>Vinyl</td>
+                        <td>£24.99</td>
+                        <td><img src="../images/supreme.jpeg" style="width: 20%;"></td>
+                        <td><div onmouseover="mOver1(this)" onmouseout="mOut(this)">Check Availability</div></td>
+                    </tr>
+                    <tr>
+                        <td>Charles Mingus</td>
+                        <td>Mingus Ah Um</td>
+                        <td>Vinyl</td>
+                        <td>£27.99</td>
+                        <td><img src="../images/mingus.jpeg" style="width: 20%;"></td>
+                        <td><div onmouseover="mOver6(this)" onmouseout="mOut(this)">Check Availability</div></td>
+                    </tr>
+                    <tr>
+                        <td>Ornette Coleman</td>
+                        <td>The Shape of Jazz to Come</td>
+                        <td>Vinyl</td>
+                        <td>£21.99</td>
+                        <td><img src="../images/ornette.jpeg" style="width: 20%;"></td>
+                        <td><div onmouseover="mOver3(this)" onmouseout="mOut(this)">Check Availability</div></td>
+                    </tr>
+                    <tr>
+                        <td>Sonny Rollins</td>
+                        <td>Saxophone Colossus</td>
+                        <td>Vinyl</td>
+                        <td>£22.99</td>
+                        <td><img src="../images/rollins.jpeg" style="width: 20%;"></td>
+                        <td><div onmouseover="mOver5(this)" onmouseout="mOut(this)">Check Availability</div></td>
+                    </tr>
+                    <tr>
+                        <td>Dave Bruebeck</td>
+                        <td>Time Out</td>
+                        <td>Vinyl</td>
+                        <td>£26.99</td>
+                        <td><img src="../images/brubeck.jpeg" style="width: 20%;"></td>
+                        <td><div onmouseover="mOver4(this)" onmouseout="mOut(this)">Check Availability</div></td>
+                    </tr>
+
+                    <!-- JavaScript to manipulate the DOM -->
+                    <script>
+                        function mOver1(obj) {
+                            obj.innerHTML = "out of stock"
+                        }
+
+                        function mOver2(obj) {
+                            obj.innerHTML = "10 in stock"
+                        }
+
+                        function mOver3(obj) {
+                            obj.innerHTML = "9 in stock"
+                        }
+
+                        function mOver4(obj) {
+                            obj.innerHTML = "8 in stock"
+                        }
+
+                        function mOver5(obj) {
+                            obj.innerHTML = "7 in stock"
+                        }
+
+                        function mOver6(obj) {
+                            obj.innerHTML = "6 in stock"
+                        }
+
+                        function mOut(obj) {
+                            obj.innerHTML = "Check Availability"
+                        }
+                    </script>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- jQuery for simplifying code that communicates with data -->
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").slideToggle("slow");
+            });
+        });
+
+        /* JavaScript Objects */
+        const item1 = {
+            name: "Art Blakey and the Jazz Messengers",
+            title: "Moanin'",
+            format: "CD",
+            price: "£3.99",
+        };
+
+        const item2 = {
+            name: "Billie Holiday",
+            title: "Lady In Satin",
+            format: "Vinyl",
+            price: "£13.99"
+        };
+
+        const item3 = {
+            name: "Stan Getz and Joao Gilberto",
+            title: "Getz/Gilberto",
+            format: "CD",
+            price: "£6.99"
+        };
+
+        const item4 = {
+            name: "Thelonious Monk",
+            title: "Genius of Modern Music: Volume 1",
+            format: "CD",
+            price: "£6.99"
+        };
+
+    </script>
+
+    <div id="flip">Click Here for This Weeks Special Offers</div>
+    <div id="panel">
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+        <script>
+            document.getElementById("demo1").innerHTML = item1.name + " - " + item1.title + " - " + item1.format + " - " + item1.price;
+            document.getElementById("demo2").innerHTML = item2.name + " - " + item2.title + " - " + item2.format + " - " + item2.price;
+            document.getElementById("demo3").innerHTML = item3.name + " - " + item3.title + " - " + item3.format + " - " + item3.price;
+            document.getElementById("demo4").innerHTML = item4.name + " - " + item4.title + " - " + item4.format + " - " + item4.price;
+        </script>
+    </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="jumbotron-fluid text-center bg-dark p-5">
+
+        <div class="container text-white">
+            <p>&copy; Copyright 2022</p>
+            <p><a href="mailto:themusic@shop.net" class="text-white">themusic@shop.net</a></p>
+        </div>
+
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="../scripts/script.js"></script>
+</body>
+
+</html>
