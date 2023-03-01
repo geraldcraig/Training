@@ -1,3 +1,5 @@
+import React from "react";
+import "../App.css";
 import banner from '../images/banner.jpg';
 
 

@@ -1,3 +1,5 @@
+import React from "react";
+import "../App.css";
 import church from "../images/church.jpeg";
 import balloons from "../images/balloons.jpeg";
 import drink from "../images/drink.jpeg";

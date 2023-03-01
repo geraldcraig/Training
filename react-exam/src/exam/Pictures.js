@@ -1,9 +1,12 @@
+import React from "react";
+import "../App.css";
 import adobe from "../images/adobe.jpeg";
 import desert from "../images/desert.jpeg";
 import dish from "../images/dish.jpeg";
 import fort from "../images/fort.jpeg";
 import hills from "../images/hills.jpeg";
 import mask from "../images/mask.jpeg";
+
 
 const Pictures = () => {
     return <body>
@@ -39,7 +42,7 @@ const Pictures = () => {
 
             <div id="contact">
 
-                <h2>Heritage us today for more information or to request a brochure.</h2>
+                <h2>Call us today for more information or to request a brochure.</h2>
                 <h4>Call us: 1-800-284-2282</h4>
                 <h4>Official USA Tourist Website: <a href="https://www.visittheusa.co.uk/"
                                                      target="_blank">visittheusa.co.uk</a></h4>

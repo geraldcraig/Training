@@ -1,3 +1,5 @@
+import React from "react";
+import "../App.css";
 import hispanic from "../images/hispanic.jpeg";
 import indian from "../images/indian.jpeg";
 import chilli from "../images/chilli.jpeg";

@@ -1,3 +1,5 @@
+import React from "react";
+import "../App.css";
 import pool from "../images/pool.jpeg";
 import hotel from "../images/hotel.jpeg";
 
