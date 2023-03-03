@@ -19,7 +19,7 @@
 //
 // <!--?>-->
 
-const Home = () => {
+const Home1 = () => {
     return <body>
 
     <div id="container">

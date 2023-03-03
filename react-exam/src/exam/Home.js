@@ -4,7 +4,8 @@ import banner from '../images/banner.jpg';
 
 
 const Home = () => {
-    return <body>
+    return (
+    <body>
 
     <div id="container">
 
@@ -65,7 +66,8 @@ const Home = () => {
         </footer>
 
     </div>
-    </body>;
+    </body>
+);
 };
 
 export default Home;
