@@ -4,8 +4,8 @@ import { Container, Row, Button, Card } from 'react-bootstrap';
 
 
 function List() {
-    const [item, setItem] = useState([]);
-    const [editing, setEditing] useState(false);
+    // const [item, setItem] = useState([]);
+    // const [editing, setEditing] useState(false);
     return (
         <h1>List</h1>
     );
