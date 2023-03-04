@@ -1,9 +1,7 @@
-import { Outlet, NavLink } from "react-router-dom";
+import {NavLink, Outlet} from "react-router-dom";
 import '../App.css';
-import "bootstrap/dist/css/bootstrap.min.css";
 import Header from './Header';
 import Footer from './Footer';
-
 
 const Layout = () => {
     const style = ({isActive}) => ({
@@ -19,10 +17,10 @@ const Layout = () => {
                     <thead>
                     <tr>
                         <th><NavLink to="/home">Home</NavLink></th>
-                        <th><NavLink to="/about">About</NavLink></th>
-                        <th><NavLink to="/contact">Contact</NavLink></th>
-                        <th><NavLink to="/products">Products</NavLink></th>
-                        <th><NavLink to="/*">Error</NavLink></th>
+                        <th><NavLink to="/attractions">Tourist Attractions</NavLink></th>
+                        <th><NavLink to="/heritage">Cultural Heritage</NavLink></th>
+                        <th><NavLink to="/accommodation">Places To Stay</NavLink></th>
+                        <th><NavLink to="/pictures">Pictures</NavLink></th>
                     </tr>
                     </thead>
                 </table>

@@ -1,11 +1,11 @@
 import './App.css';
 import { Routes, Route} from "react-router-dom";
-import Layout from "./project/Layout";
-import Home from "./project/Home";
-import About from "./project/About";
-import Contact from "./project/Contact";
-import Products from "./project/Products";
-import Error from "./project/Error";
+import Layout from "./Components/Layout";
+import Home from "./Components/Home";
+import About from "./Components/About";
+import Contact from "./Components/Contact";
+import Products from "./Components/Products";
+import Error from "./Components/Error";
 
 function App() {
     return (

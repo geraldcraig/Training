@@ -1,5 +1,5 @@
 import '../App.css';
-import { Outlet, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -14,15 +14,14 @@ const Header = () => {
                 </button>
 
                 <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
-                    <li><Link to="/products">Products</Link></li>
+                    <li><NavLink to="/home">Home</NavLink></li>
+                    <li><NavLink to="/about">About</NavLink></li>
+                    <li><NavLink to="/contact">Contact</NavLink></li>
+                    <li><NavLink to="/products">Products</NavLink></li>
                 </ul>
             </nav>
             </body>
 
-            <Outlet />
         </>
     )
 };

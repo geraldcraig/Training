@@ -1,12 +1,12 @@
 import {Route, Routes} from "react-router-dom";
 import './App.css';
-import Layout from "./exam/Layout";
-import Home from "./exam/Home";
-import Attractions from "./exam/Attractions";
-import Heritage from "./exam/Heritage";
-import Accommodation from "./exam/Accommodation";
-import Pictures from "./exam/Pictures";
-import Error from "./exam/Error";
+import Layout from "./Components/Layout";
+import Home from "./Components/Home";
+import Attractions from "./Components/Attractions";
+import Heritage from "./Components/Heritage";
+import Accommodation from "./Components/Accommodation";
+import Pictures from "./Components/Pictures";
+import Error from "./Components/Error";
 
 
 function App() {
