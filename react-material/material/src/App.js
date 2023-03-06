@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { useForm } from "react-hook-form";
+import { forwardRef } from 'react';
 
-function App() {
+// The following component is an example of your existing Input Component
+const Input = ({ label, register, required }) => (
+  <>
+    <label>{label}</label>
+    <input {...register(label, { required })} />
+  </>
+);
+
+// you can use React.forwardRef to pass the ref too
+const Select = React.forwardRef(({ onChange, onBlur, name, label }, ref) => (
+  <>
+    <label>{label}</label>
+    <select name={name} ref={ref} onChange={onChange} onBlur={onBlur}>
+      <option value="20">20</option>
+      <option value="30">30</option>
+    </select>
+  </>
+));
+
+const App = () => {
+  const { register, handleSubmit } = useForm();
+
+  const onSubmit = (data) => {
+    alert(JSON.stringify(data));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <Input label="First Name" register={register} required />
+      <Select label="Age" {...register("Age")} />
+      <input type="submit" />
+    </form>
   );
-}
+};
 
 export default App;
