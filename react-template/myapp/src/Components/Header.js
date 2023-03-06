@@ -13,6 +13,7 @@ const Header = () => {
                     <th><NavLink to="/home">Home</NavLink></th>
                     <th><NavLink to="/form">Form</NavLink></th>
                     <th><NavLink to="/list">List</NavLink></th>
+                    <th><NavLink to="/search">Search</NavLink></th>
                 </tr>
                 </thead>
             </table>
