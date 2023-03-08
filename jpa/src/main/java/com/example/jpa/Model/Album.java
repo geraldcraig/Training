@@ -1,4 +1,4 @@
-package uk.ac.qub.backend.Model;
+package com.example.jpa.Model;
 
 import javax.persistence.*;
 
@@ -11,9 +11,6 @@ public class Album {
     private Long id;
 
     @Column(nullable = false)
-    private Integer number;
-
-    @Column(nullable = false)
     private String album;
 
     @Column(nullable = false)
@@ -23,7 +20,7 @@ public class Album {
     private Integer year;
 
     @Column(nullable = false)
-    private String image;
+    private Integer number;
 
     public Long getId() {
         return id;
@@ -31,14 +28,6 @@ public class Album {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Integer getNumber() {
-        return number;
-    }
-
-    public void setNumber(Integer number) {
-        this.number = number;
     }
 
     public String getAlbum() {
@@ -65,23 +54,22 @@ public class Album {
         this.year = year;
     }
 
-    public String getImage() {
-        return image;
+    public Integer getNumber() {
+        return number;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setNumber(Integer number) {
+        this.number = number;
     }
 
     @Override
     public String toString() {
         return "Album{" +
                 "id=" + id +
-                ", number=" + number +
                 ", album='" + album + '\'' +
                 ", artist='" + artist + '\'' +
                 ", year=" + year +
-                ", image='" + image + '\'' +
+                ", number=" + number +
                 '}';
     }
 }

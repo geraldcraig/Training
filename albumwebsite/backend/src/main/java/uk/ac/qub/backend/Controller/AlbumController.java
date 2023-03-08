@@ -8,7 +8,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
-@RequestMapping("/")
+@RequestMapping("/home")
 public class AlbumController {
 
     private final AlbumService albumService;

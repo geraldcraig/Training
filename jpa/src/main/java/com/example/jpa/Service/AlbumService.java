@@ -1,8 +1,8 @@
-package uk.ac.qub.backend.Service;
+package com.example.jpa.Service;
 
+import com.example.jpa.Model.Album;
+import com.example.jpa.Repository.AlbumRepository;
 import org.springframework.stereotype.Service;
-import uk.ac.qub.backend.Model.Album;
-import uk.ac.qub.backend.Repository.AlbumRepository;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
@@ -25,8 +25,8 @@ public class AlbumService {
                 .orElseThrow(() -> new EntityNotFoundException("Product not found with id: " + id));
     }
 
-//    public List<Album> findAlbumByQueryName(Integer year) {
-//        System.out.println(year);
-//        return albumRepository.findByQuery(year);
-//    }
+    public List<Album> findAlbumByQueryName(Integer year) {
+        System.out.println(year);
+        return albumRepository.findByQuery(year);
+    }
 }
