@@ -3,7 +3,7 @@ import AlbumForm from './AlbumForm';
 import {Button, Card, Container, Row} from 'react-bootstrap';
 
 
-function Home() {
+function AlbumList() {
     const [albums, setAlbums] = useState([]);
     const [editing, setEditing] = useState(false);
     const initialFormState = {id: null, number: '', album: '', artist: '', year: '', image: ''};
@@ -144,4 +144,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default AlbumList;

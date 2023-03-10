@@ -1,7 +1,7 @@
 import {Route, Routes} from "react-router-dom";
 import './App.css';
 import Layout from "./Components/Layout";
-import Home from "./Components/Home";
+import AlbumList from "./Components/AlbumList";
 import Albums from "./Components/Albums";
 import Login from "./Components/Login";
 import Register from "./Components/Register";
@@ -15,7 +15,7 @@ function App() {
         <header>
           <Routes>
             <Route path="/" element={<Layout/>}>
-              <Route path="/home" element={<Home/>}/>
+              <Route index element={<AlbumList/>}/>
               <Route path="/albums" element={<Albums/>}/>
               <Route path="/login" element={<Login/>}/>
               <Route path="/register" element={<Register/>}/>

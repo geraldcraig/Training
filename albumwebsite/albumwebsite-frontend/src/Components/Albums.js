@@ -1,8 +1,11 @@
 import React from "react";
 import "../App.css";
+import AlbumList from "./AlbumList";
 
 const Albums = () => {
-    return <h1>Top 500 Albums</h1>;
+    return (
+        <AlbumList />
+    );
 };
 
 export default Albums;

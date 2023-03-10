@@ -9,7 +9,7 @@ const Header = () => {
                     <table className="table">
                         <thead>
                         <tr>
-                            <th><NavLink to="/home">Record Website</NavLink></th>
+                            <th><NavLink to="/">Record Website</NavLink></th>
                             <th><NavLink to="/albums">Top 500 Albums</NavLink></th>
                             <th><NavLink to="/login">Log In</NavLink></th>
                             <th><NavLink to="/register">Register</NavLink></th>
