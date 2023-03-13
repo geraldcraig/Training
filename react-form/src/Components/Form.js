@@ -19,20 +19,20 @@ function Form() {
         <form onSubmit={handleSubmit}>
             <fieldset>
                 <legend>Audio processing options</legend>
-                <select value={inputs.car || ""} onChange={handleChange}>
-                    <option value="Ford">Ford</option>
-                    <option value="Volvo">Volvo</option>
-                    <option value="Fiat">Fiat</option>
+                <select name="stem" value={inputs.stem || ""} onChange={handleChange}>
+                    <option value="2stems">2 Stems</option>
+                    <option value="4stems">4 stems</option>
+                    <option value="5stems">5 stems</option>
                 </select>
             </fieldset>
 
             <fieldset>
                 <legend>Select an audio file to process</legend>
-                <label>Enter your age:
+                <label>Enter file:
                     <input
-                        type="number"
-                        name="age"
-                        value={inputs.age || ""}
+                        type="text"
+                        name="file"
+                        value={inputs.file || ""}
                         onChange={handleChange}
                     />
                 </label>
