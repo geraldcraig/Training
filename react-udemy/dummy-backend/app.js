@@ -16,10 +16,10 @@ app.use((req, res, next) => {
     next();
 });
 
-app.get('/posts', async (reg, res) => {
+app.get('/posts', async (req, res) => {
     const storedPosts = await getStoredPosts();
-    await new Promise((resolve, reject) => setTimeout(() => resolve(), 1500));
-    res.json({ posts: storePosts});
+    // await new Promise((resolve, reject) => setTimeout(() => resolve(), 1500));
+    res.json({ posts: storedPosts });
 });
 
 app.get('/posts/:id', async (req, res) => {

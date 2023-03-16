@@ -4,7 +4,7 @@
 
 :root {
   min-height: 100vh;
-  font-family: Inter, Avenir, Arial, Helvetica, sans-serif;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -19,6 +19,4 @@
 body {
   margin: 0;
   color: #e6ddf9;
-  
 }
-
