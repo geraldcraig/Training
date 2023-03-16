@@ -5,9 +5,9 @@ import classes from './Album.module.css';
 const Album = (props) => {
   return (
     <li className={classes.album}>
-      <h2>{props.title}</h2>
-      {/* <h3>{props.name}</h3>
-      <p>{props.year}</p> */}
+      <h4>{props.title}</h4>
+      <h4>{props.name}</h4>
+      <p>{props.image}</p>
     </li>
   );
 }
