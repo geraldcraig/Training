@@ -25,7 +25,7 @@ function App() {
                 loadedAlbums.push({
                     id: key,
                     title: data[key].title,
-                    name: data[key].name,
+                    // name: data[key].name,
                     // image: data[key].image,
                 });
             }
