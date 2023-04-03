@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+//@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "https://9c96-103-106-239-104.ap.ngrok.io")
 @RestController
 @RequestMapping("/api/v1/reviews")
 public class ReviewController {

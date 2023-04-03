@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "https://9c96-103-106-239-104.ap.ngrok.io")
 @RestController
 @RequestMapping("/api/v1/movies")
 public class MovieController {
