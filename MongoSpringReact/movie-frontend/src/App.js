@@ -1,5 +1,5 @@
 import './App.css';
-import api from './api/axiosConfig';
+// import api from './api/axiosConfig';
 import {useState, useEffect} from 'react';
 import Layout from './components/Layout';
 import {Routes, Route} from 'react-router-dom';
@@ -8,6 +8,7 @@ import Header from './components/header/Header';
 import Trailer from './components/trailer/Trailer';
 import Reviews from './components/reviews/Reviews';
 import NotFound from './components/notFound/NotFound';
+import axios from 'axios';
 
 function App() {
 
@@ -15,27 +16,40 @@ function App() {
   const [movie, setMovie] = useState();
   const [reviews, setReviews] = useState([]);
 
-  const getMovies = async () =>{
-    
-    try
-    {
+  const baseURL = "http://localhost:8080";
 
-      const response = await api.get("/api/v1/movies");
-
+  const getMovies = async () => {
+    try {
+      const response = await axios.get(`${baseURL}/api/v1/movies`);
       setMovies(response.data);
-
-    } 
-    catch(err)
-    {
+    } catch(err) {
       console.log(err);
     }
   }
+
+  // const getMovies = async () =>{
+    
+  //   try
+  //   {
+
+  //     // const response = await api.get("/api/v1/movies");
+  //     const response = await axios.get("/api/v1/movies");
+
+  //     setMovies(response.data);
+
+  //   } 
+  //   catch(err)
+  //   {
+  //     console.log(err);
+  //   }
+  // }
 
   const getMovieData = async (movieId) => {
      
     try 
     {
-        const response = await api.get(`/api/v1/movies/${movieId}`);
+        // const response = await api.get(`/api/v1/movies/${movieId}`);
+        const response = await axios.get(`${baseURL}/api/v1/movies/${movieId}`);
 
         const singleMovie = response.data;
 

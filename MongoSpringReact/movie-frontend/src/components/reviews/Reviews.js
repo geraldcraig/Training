@@ -1,5 +1,5 @@
 import {useEffect, useRef} from 'react';
-import api from '../../api/axiosConfig';
+import axios from 'axios';
 import {useParams} from 'react-router-dom';
 import {Container, Row, Col} from 'react-bootstrap';
 import ReviewForm from '../reviewForm/ReviewForm';
@@ -12,6 +12,8 @@ const Reviews = ({getMovieData,movie,reviews,setReviews}) => {
     let params = useParams();
     const movieId = params.movieId;
 
+    // const baseURL = "http://localhost:8080";
+
     useEffect(()=>{
         getMovieData(movieId);
     },[])
@@ -23,7 +25,7 @@ const Reviews = ({getMovieData,movie,reviews,setReviews}) => {
 
         try
         {
-            const response = await api.post("/api/v1/reviews",{reviewBody:rev.value,imdbId:movieId});
+            const response = await axios.post("http://localhost:8080/api/v1/reviews",{reviewBody:rev.value,imdbId:movieId});
 
             const updatedReviews = [...reviews, {body:rev.value}];
     
