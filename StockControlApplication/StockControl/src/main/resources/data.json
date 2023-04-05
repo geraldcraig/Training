@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Target C#",
+    "description": "Beginners C#",
+    "price": "11.99",
+    "stock": "100"
+  },
+  {
+    "name": "Java Beginners",
+    "description": "Introduction to Java",
+    "price": "12.99",
+    "stock": "200"
+  },
+  {
+    "name": "HTML",
+    "description": "HTML 5",
+    "price": "13.99",
+    "stock": "3"
+  },
+  {
+    "name": "CSS",
+    "description": "CSS 3 & Bootstrap",
+    "price": "14.99",
+    "stock": "4"
+  },
+  {
+    "name": "JavaScript",
+    "description": "JavaScript Essentials",
+    "price": "15.99",
+    "stock": "5"
+  },
+  {
+    "name": "ReactJS",
+    "description": "React Beginners to Advanced",
+    "price": "16.99",
+    "stock": "6"
+  },
+  {
+    "name": "Spring Boot",
+    "description": "Spring Boot - Backend Development",
+    "price": "17.99",
+    "stock": "7"
+  },
+  {
+    "name": "Git",
+    "description": "Version Control With Git",
+    "price": "18.99",
+    "stock": "8"
+  },
+  {
+    "name": "Jenkins",
+    "description": "Continuous Development using Jenkins",
+    "price": "19.99",
+    "stock": "9"
+  },
+  {
+    "name": "Test Driven Development",
+    "description": "Test Driven Development - JUnit",
+    "price": "20.99",
+    "stock": "10"
+  }
+]
