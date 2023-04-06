@@ -1,0 +1,38 @@
+[
+  {
+    "number": "1",
+    "year": "1967",
+    "title": "Sgt. Pepper's Lonely Hearts Club Band",
+    "artist": "The Beatles",
+    "genre": "Rock,Rock & Roll",
+    "subgenre": "Psychedelic Rock",
+    "artwork": ""
+  },
+  {"number": "2","year": 1966,"title": Pet, Sounds,"artist": The, Beach Boys,"genre": Rock,",Pop Rock, Psychedelic Rock","artwork": ""},
+  {"number": 3,"year": 1966,"title": Revolver,"artist": The, Beatles,"genre": Rock,"Psychedelic Rock, Pop Rock","artwork": ""},
+  {"number": 4,"year": 1965,"title": Highway, 61 Revisited,"artist": Bob, Dylan,"genre": Rock,"Folk Rock, Blues Rock","artwork": ""},
+  {"number": 5,"year": 1965,"title": Rubber, Soul,"artist": The, Beatles,"genre": "Rock, Pop",Pop Rock,"artwork": ""},
+  {"number": 6,"year": 1971,"title": What,\,'s Going On,"artist": Marvin Gaye,"genre": Funk / Soul,Soul,"artwork": ""},
+  {"number": 7,"year": 1972,"title": Exile, on Main St.,"artist": The, Rolling Stones,"genre": Rock,"Blues Rock, Rock & Roll, Classic Rock","artwork": ""},
+  {"number": 8,"year": 1979,"title": London, Calling,"artist": The, Clash,"genre": Rock,"Punk, New Wave""artwork": ""},
+  {"number": 9,"year": 1966,"title": Blonde, on Blonde,"artist": Bob, Dylan,"genre": "Rock, Blues","Folk Rock, Rhythm & Blues","artwork": ""},
+  {"number": 10,"year": 1968,"title": "The Beatles (","The White Album"")","artist": The, Beatles,"genre": Rock,"Rock & Roll, Pop Rock, Psychedelic Rock, Experimental","artwork": ""},
+  {"number": 11,"year": 1976,"title": The, Sun Sessions,"artist": Elvis, Presley,"genre": Rock,Rock & Roll,"artwork": ""},
+  {"number": 12,"year": 1959,"title": Kind, of Blue,"artist": Miles, Davis,"genre": Jazz,Modal,"artwork": ""},
+  {"number": 13,"year": 1967,"title": The, Velvet Underground & Nico,"artist": The, Velvet Underground,"genre": Rock,"Garage Rock, Art Rock, Experimental","artwork": ""},
+  {"number": 14,"year": 1969,"title": Abbey, Road,"artist": The, Beatles,"genre": Rock,"Psychedelic Rock, Classic Rock, Pop Rock","artwork": ""},
+  {"number": 15,"year": 1967,"title": Are, You Experienced,"artist": The, Jimi Hendrix Experience,"genre": "Rock, Blues","Blues Rock, Psychedelic Rock","artwork": ""},
+  {"number": 16,"year": 1975,"title": Blood, on the Tracks,"artist": Bob, Dylan,"genre": Rock,"Folk Rock, Acoustic, Ballad","artwork": ""},
+  {"number": 17,"year": 1991,"title": Nevermind,"artist": Nirvana,"genre": Rock,"Alternative Rock, Grunge","artwork": ""},
+  {"number": 18,"year": 1975,"title": Born, to Run,"artist": Bruce, Springsteen,"genre": Rock,Pop Rock,"artwork": ""}
+  {"number": 19, "year": 1968,"title": Astral, Weeks,"artist": Van, Morrison,"genre": "Jazz, Rock, Blues, Folk, World, & Country","Acoustic, Classic Rock, Free Improvisation","artwork": ""},
+  {
+    "number": "20",
+    "year": "1982",
+    "title": "Thriller",
+    "artist": "Michael Jackson",
+    "genre": "Funk / Soul, Pop",
+    "subgenre": "Disco",
+    "artwork": ""
+  }
+]
