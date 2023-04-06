@@ -6,7 +6,7 @@ import {Button, Card, Container, Row} from 'react-bootstrap';
 function AlbumList() {
     const [albums, setAlbums] = useState([]);
     const [editing, setEditing] = useState(false);
-    const initialFormState = {id: null, number: '', album: '', artist: '', year: '', image: ''};
+    const initialFormState = {id: null, number: '', year: '', title: '', artist: '', artwork: ''};
     const [currentAlbum, setCurrentAlbum] = useState(initialFormState);
     const baseURL = "http://localhost:8080";
 
@@ -55,7 +55,7 @@ function AlbumList() {
         setEditing(true);
         setCurrentAlbum({
             id: album.id,
-            album: album.album,
+            album: album.title,
             artist: album.artist,
             year: album.year,
             number: album.number
@@ -80,8 +80,6 @@ function AlbumList() {
                                         <th>Artist</th>
                                         <th>Year</th>
                                         <th>Artwork</th>
-                                        <th>Edit Album</th>
-                                        <th>Delete Album</th>
                                     </tr>
                                     </thead>
 
@@ -89,10 +87,11 @@ function AlbumList() {
                                     {albums.map(album => (
                                         <tr key={album.id}>
                                             <td style={{textAlign: 'center'}}>{album.number}</td>
-                                            <td>{album.album}</td>
+                                            <td>{album.title}</td>
                                             <td>{album.artist}</td>
                                             <td>{album.year}</td>
-                                            <td style={{textAlign: 'center'}}>{<img src={album.image } style={{ width: '20%'}}/>}</td>
+                                            <td>{album.artwork}</td>
+                                            {/* <td style={{textAlign: 'center'}}>{<img src={album.image } style={{ width: '20%'}}/>}</td>
                                             <td style={{textAlign: 'center'}}>
                                                 <Button variant="outline-primary"
                                                         onClick={() => editRow(album)}>Edit</Button>
@@ -100,7 +99,7 @@ function AlbumList() {
                                             <td style={{textAlign: 'center'}}>
                                                 <Button variant="outline-danger"
                                                         onClick={() => deleteAlbum(album).id}>Delete</Button>
-                                            </td>
+                                            </td> */}
                                         </tr>
                                     ))}
                                     </tbody>
