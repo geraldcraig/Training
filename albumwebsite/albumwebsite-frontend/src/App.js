@@ -2,6 +2,7 @@ import {Route, Routes} from "react-router-dom";
 import './App.css';
 import Layout from "./Components/Layout";
 import AlbumList from "./Components/AlbumList";
+import AlbumForm from "./Components/AlbumForm";
 import Albums from "./Components/Albums";
 import Login from "./Components/Login";
 import Register from "./Components/Register";
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Layout/>}>
               <Route index element={<AlbumList/>}/>
               <Route path="/albums" element={<Albums/>}/>
+              <Route path="/albumform" element={<AlbumForm/>}/>
               <Route path="/login" element={<Login/>}/>
               <Route path="/register" element={<Register/>}/>
               <Route path="/admin" element={<Admin/>}/>

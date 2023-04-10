@@ -6,13 +6,13 @@ import {Button, Card, Container, Row} from 'react-bootstrap';
 function AlbumList() {
     const [albums, setAlbums] = useState([]);
     const [editing, setEditing] = useState(false);
-    const initialFormState = {id: null, number: '', year: '', title: '', artist: '', artwork: ''};
+    const initialFormState = {id: null, number: '', year: '', title: '', artist: '', genre: '', subgenre: '', artwork: ''};
     const [currentAlbum, setCurrentAlbum] = useState(initialFormState);
     const baseURL = "http://localhost:8080";
 
     // The useEffect is a hook to fetch the list of items from the API when the component mounts using fetch
     useEffect(() => {
-        fetch(`${baseURL}/home`)
+        fetch(`${baseURL}/api/albums`)
             .then(response => response.json())
             .then(data => setAlbums(data));
     }, []);
@@ -44,9 +44,7 @@ function AlbumList() {
             method: 'PUT',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(updatedAlbum)
-        })
-            .then(response => response.json())
-            .then(data => {
+        }).then(data => {
                 setAlbums(albums.map(album => (album.id === id ? updateAlbum : album)))
             });
     };
@@ -55,10 +53,13 @@ function AlbumList() {
         setEditing(true);
         setCurrentAlbum({
             id: album.id,
-            album: album.title,
-            artist: album.artist,
+            number: album.number,
             year: album.year,
-            number: album.number
+            title: album.title,
+            artist: album.artist,
+            genre: album.genre,
+            subgenre: album.subgenre,
+            artwork: album.artwork
         })
     };
 
@@ -90,9 +91,9 @@ function AlbumList() {
                                             <td>{album.title}</td>
                                             <td>{album.artist}</td>
                                             <td>{album.year}</td>
-                                            <td>{album.artwork}</td>
-                                            {/* <td style={{textAlign: 'center'}}>{<img src={album.image } style={{ width: '20%'}}/>}</td>
-                                            <td style={{textAlign: 'center'}}>
+                                            {/* <td>{album.artwork}</td> */}
+                                            <td style={{textAlign: 'center'}}>{<img src={album.artwork } style={{ width: '20%'}}/>}</td>
+                                            {/* <td style={{textAlign: 'center'}}>
                                                 <Button variant="outline-primary"
                                                         onClick={() => editRow(album)}>Edit</Button>
                                             </td>
@@ -140,7 +141,7 @@ function AlbumList() {
                 </Row>
             </Container>
         </>
-    );
-}
+    )
+};
 
 export default AlbumList;

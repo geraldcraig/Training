@@ -5,6 +5,7 @@ import com.example.stockcontrol.Repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductService {
@@ -20,26 +21,32 @@ public class ProductService {
     }
 
 //    public Product getProductById(String id) {
-//        return  productRepository.findById(id)
+//        return  productRepository.findById(id);
 //                .orElseThrow(() -> new EntityNotFoundException("Product not found with id: " + id));
 //    }
+
+    public Optional<Product> getProductById(String id) {
+        return productRepository.findById(id);
+    }
 
     public Product createProduct(Product product) {
         return productRepository.save(product);
     }
 
-//    public Product updateProduct(String id, Product product) {
-//        Product existingProduct = getProductById(id);
-//        existingProduct.setName(product.getName());
-//        existingProduct.setDescription(product.getDescription());
-//        existingProduct.setPrice(product.getPrice());
-//        existingProduct.setStock(product.getStock());
-//        return productRepository.save(existingProduct);
-//    }
-//
-//    public void deleteProduct(String id) {
+    public Product updateProduct(String id, Product product) {
+        Optional<Product> findProductId = productRepository.findById(id);
+        Product existingProduct = findProductId.get();
+//        Optional<Product> existingProduct = getProductById(id);
+        existingProduct.setName(product.getName());
+        existingProduct.setDescription(product.getDescription());
+        existingProduct.setPrice(product.getPrice());
+        existingProduct.setStock(product.getStock());
+        return productRepository.save(existingProduct);
+    }
+
+    public void deleteProduct(String id) {
 //        getProductById(id);
-//        productRepository.deleteById(id);
-//    }
+        productRepository.deleteById(id);
+    }
 
 }
