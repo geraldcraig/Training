@@ -1,6 +1,5 @@
 package com.example.springmongo;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,8 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringMongoApplication implements CommandLineRunner {
 
-    @Autowired
-    private CustomerRepository repository;
+    private final CustomerRepository repository;
+
+    public SpringMongoApplication(CustomerRepository repository) {
+        this.repository = repository;
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(SpringMongoApplication.class, args);
