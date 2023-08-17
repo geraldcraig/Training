@@ -8,12 +8,7 @@ public class Concert {
 
     @Id
     private String id;
-
     private String artist;
-
     private String venue;
-
     private String date;
-
-
 }
