@@ -23,13 +23,13 @@ const AlertNotification = ({
 
 const mapStoreStateToProps = ({ alert }) => {
   return {
-    ...alert,
+    ...alert
   };
 };
 
 const mapActionsToProps = (dispatch) => {
   return {
-    ...getActions(dispatch),
+    ...getActions(dispatch)
   };
 };
 

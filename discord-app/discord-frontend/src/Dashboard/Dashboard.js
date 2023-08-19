@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
+// import React, { useEffect } from "react";
 // import { styled } from "@mui/system";
 // import SideBar from "./SideBar/SideBar";
 // import FriendsSideBar from "./FriendsSideBar/FriendsSideBar";

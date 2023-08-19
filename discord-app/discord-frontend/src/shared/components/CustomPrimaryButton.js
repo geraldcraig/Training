@@ -2,11 +2,11 @@ import React from "react";
 import Button from "@mui/material/Button";
 
 const CustomPrimaryButton = ({
-                                 label,
-                                 additionalStyles,
-                                 disabled,
-                                 onClick
-                             }) => {
+    label,
+    additionalStyles,
+    disabled,
+    onClick
+}) => {
     return (
         <Button
             variant="contained"

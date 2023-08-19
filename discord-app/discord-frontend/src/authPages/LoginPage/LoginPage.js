@@ -5,7 +5,7 @@ import LoginPageHeader from "./LoginPageHeader";
 import LoginPageInputs from "./LoginPageInputs";
 import { validateLoginForm } from "../../shared/utils/validators";
 import { connect } from "react-redux";
-// import { getActions } from "../../store/actions/authActions";
+import { getActions } from "../../store/actions/authActions";
 import { useHistory } from "react-router-dom";
 
 
@@ -24,12 +24,12 @@ const LoginPage = ({ login }) => {
       console.log(mail);
       console.log(password);
       console.log("login in");
-//     const userDetails = {
-//       mail,
-//       password,
-//     };
-//
-//     login(userDetails, history);
+    const userDetails = {
+      mail,
+      password
+    };
+
+    login(userDetails, history);
   };
 
   return (
@@ -45,12 +45,11 @@ const LoginPage = ({ login }) => {
     </AuthBox>
   );
 };
-//
-// const mapActionsToProps = (dispatch) => {
-//   return {
-//     ...getActions(dispatch),
-//   };
-// };
-//
-// export default connect(null, mapActionsToProps)(LoginPage);
-export default LoginPage;
+
+const mapActionsToProps = (dispatch) => {
+  return {
+    ...getActions(dispatch)
+  };
+};
+
+export default connect(null, mapActionsToProps)(LoginPage);

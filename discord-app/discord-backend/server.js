@@ -2,15 +2,13 @@ const express = require("express");
 const http = require("http");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const exp = require("constants");
-const { log } = require("console");
+// const exp = require("constants");
+// const { log } = require("console");
 require("dotenv").config();
 
 // const socketServer = require("./socketServer");
-// const authRoutes = require("./routes/authRoutes");
+const authRoutes = require("./routes/authRoutes");
 // const friendInvitationRoutes = require("./routes/friendInvitationRoutes");
-
-const authRoutes = require('./routes/authRoutes');
 
 const PORT = process.env.PORT || process.env.API_PORT;
 
