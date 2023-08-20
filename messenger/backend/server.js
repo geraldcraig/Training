@@ -10,7 +10,6 @@ dotenv.config({
 
 const PORT = process.env.PORT || 5000
 app.get('/', (req, res)=>{
-     res.send('This is ssfrom backend Sever')
      res.send('This is from backend Sever')
 })
 
