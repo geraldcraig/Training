@@ -6,19 +6,42 @@ import {
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
 import LikeImage from "../../assets/images/like.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { S3Image } from "aws-amplify-react-native";
+import { useNavigation } from "@react-navigation/native";
+import { DataStore } from "aws-amplify";
+import { User } from "../models";
+
+const dummy_img =
+  "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/user.png";
 
 /* Post component */
 export default function FeedPost({ post }) {
   const [isLiked, setIsLiked] = useState(false);
+  const [user, setUser] = useState(null);
+  const navigation = useNavigation();
+
+  useEffect(() => {
+    if (!post.postUserId) {
+      return;
+    }
+    DataStore.query(User, post.postUserId).then(setUser);
+  }, [post.postUserId]);
 
   return (
     <View style={styles.post}>
       {/* Post Header with details about the author */}
-      <View style={styles.header}>
-        <Image source={{ uri: post.User.image }} style={styles.profileImage} />
+      <Pressable
+        onPress={() => navigation.navigate("Profile", { id: post.User?.id })}
+        style={styles.header}
+      >
+        {user?.image ? (
+          <S3Image imgKey={user.image} style={styles.profileImage} />
+        ) : (
+          <Image source={{ uri: dummy_img }} style={styles.profileImage} />
+        )}
         <View>
-          <Text style={styles.name}>{post.User.name}</Text>
+          <Text style={styles.name}>{user?.name}</Text>
           <Text style={styles.subtitle}>{post.createdAt}</Text>
         </View>
         <Entypo
@@ -27,16 +50,14 @@ export default function FeedPost({ post }) {
           color="gray"
           style={styles.icon}
         />
-      </View>
+      </Pressable>
+
       {/* Post body with description and image */}
       <Text style={styles.description}>{post.description}</Text>
       {post.image && (
-        <Image
-          source={{ uri: post.image }}
-          style={styles.image}
-          resizeMode="cover"
-        />
+        <S3Image imgKey={post.image} style={styles.image} resizeMode="cover" />
       )}
+
       {/* Post footer with likes and button */}
       <View style={styles.footer}>
         <View style={styles.statsRow}>
@@ -82,6 +103,7 @@ export default function FeedPost({ post }) {
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   post: {
     backgroundColor: "#fff",

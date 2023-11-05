@@ -1,22 +1,41 @@
+import { useState, useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View } from "react-native";
-import FeedScreen from "./src/screens/FeedScreen";
-import CreatePostScreen from "./src/screens/CreatePostScreen";
+import { StyleSheet } from "react-native";
+import Navigator from "./src/navigation";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { Amplify, Auth, DataStore } from "aws-amplify";
+import awsconfig from "./src/aws-exports";
+import { withAuthenticator } from "aws-amplify-react-native";
+// import UserContextProvider from "./src/contexts/UserContext";
 
-export default function App() {
+Amplify.configure({ ...awsconfig, Analytics: { disabled: true } });
+// DataStore.clear();
+
+function App() {
+  const [authUser, setAuthUser] = useState(null);
+
+  useEffect(() => {
+    Auth.currentAuthenticatedUser().then(setAuthUser);
+  }, []);
+
+  console.log(authUser);
+
   return (
-    <View style={styles.container}>
+    <SafeAreaProvider style={styles.container}>
       <StatusBar style="auto" />
 
-      <CreatePostScreen />
-    </View>
+      {/* <UserContextProvider> */}
+      <Navigator />
+      {/* </UserContextProvider> */}
+    </SafeAreaProvider>
   );
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#c9c9c9",
-    alignItems: "center",
-    justifyContent: "center",
   },
 });
+
+export default withAuthenticator(App);
