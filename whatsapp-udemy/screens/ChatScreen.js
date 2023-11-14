@@ -25,7 +25,8 @@ const ChatScreen = (props) => {
     <SafeAreaView edges={["right", "left", "bottom"]} style={styles.container}>
       <KeyboardAvoidingView 
         style={styles.screen}
-        behavior={ Platform.OS === 'ios' ? "padding" : undefined }>
+        behavior={ Platform.OS === 'ios' ? "padding" : undefined }
+        keyboardVerticalOffset={100}>
         <ImageBackground
           source={backgroundImage}
           style={styles.backgroundImage}
@@ -49,7 +50,7 @@ const ChatScreen = (props) => {
           {messageText === "" && (
             <TouchableOpacity
               style={styles.mediaButton}
-              onPress={() => console.log("Pressed")}
+              onPress={() => console.log("Pressed!")}
             >
               <Feather name="camera" size={24} color={colors.blue} />
             </TouchableOpacity>
@@ -103,7 +104,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.blue,
     borderRadius: 50,
     padding: 8,
-    width: 35,
+    // width: 35,
   }
 });
 
