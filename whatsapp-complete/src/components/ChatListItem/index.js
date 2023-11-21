@@ -18,7 +18,8 @@ const ChatListItem = ({ chat }) => {
 
       // Loop through chat.users.items and find a user that is not us (Authenticated user)
       const userItem = chat.users.items.find(
-        (item) => item.user.id !== authUser.attributes.sub);
+        (item) => item.user.id !== authUser.attributes.sub
+      );
       setUser(userItem?.user);
     };
 
@@ -27,7 +28,9 @@ const ChatListItem = ({ chat }) => {
 
   return (
     <Pressable
-      onPress={() => navigation.navigate("Chat", { id: chat.id, name: user?.name })}
+      onPress={() =>
+        navigation.navigate("Chat", { id: chat.id, name: user?.name })
+      }
       style={styles.container}
     >
       <Image source={{ uri: user?.image }} style={styles.image} />
@@ -37,11 +40,13 @@ const ChatListItem = ({ chat }) => {
           <Text style={styles.name} numberOfLines={1}>
             {user?.name}
           </Text>
-          <Text style={styles.subTitle}>{dayjs(chat.lastMessage?.createdAt).fromNow(true)}</Text>
+          <Text style={styles.subTitle}>
+            {dayjs(chat.LastMessage?.createdAt).fromNow(true)}
+          </Text>
         </View>
-        
+
         <Text numberOfLines={2} style={styles.subTitle}>
-          {chat.lastMessage?.text}
+          {chat.LastMessage?.text}
         </Text>
       </View>
     </Pressable>
@@ -50,7 +55,7 @@ const ChatListItem = ({ chat }) => {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'row',
+    flexDirection: "row",
     marginHorizontal: 10,
     marginVertical: 5,
     height: 70,
@@ -63,19 +68,20 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
+
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: 'lightgray',
+    borderBottomColor: "lightgray",
   },
   row: {
-    flexDirection: 'row',
+    flexDirection: "row",
     marginBottom: 5,
   },
   name: {
     flex: 1,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   subTitle: {
-    color: 'gray',
+    color: "gray",
   },
 });
 

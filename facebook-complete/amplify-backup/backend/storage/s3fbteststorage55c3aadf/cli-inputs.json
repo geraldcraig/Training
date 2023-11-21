@@ -1,0 +1,14 @@
+{
+  "resourceName": "s3fbteststorage55c3aadf",
+  "bucketName": "fbtest-storage-55c3aadf",
+  "policyUUID": "417ff6f1",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}
